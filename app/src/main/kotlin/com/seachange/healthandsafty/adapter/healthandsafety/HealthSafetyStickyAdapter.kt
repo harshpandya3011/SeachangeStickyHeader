@@ -15,7 +15,6 @@ import com.seachange.healthandsafty.offline.model.ModelConstants
 import com.seachange.healthandsafty.view.stickyheader.StickyHeaderItemDecoration
 import com.seachange.healthandsafty.viewmodel.HealthAndSafetyViewModel
 import kotlinx.android.synthetic.main.item_health_category.view.*
-import org.jetbrains.anko.find
 
 
 class HealthSafetyStickyAdapter internal constructor() : ListAdapter<HealthAndSafetyListData, RecyclerView.ViewHolder>(ModelDiffUtilCallback), StickyHeaderItemDecoration.HeaderEventListener {
@@ -200,70 +199,6 @@ class HealthSafetyStickyAdapter internal constructor() : ListAdapter<HealthAndSa
         }
     }
 
-//    override fun getHeaderPositionForItem(itemPosition: Int?): Int? {
-//        var headerPosition: Int? = 0
-//        for (i in itemPosition!! downTo 1) {
-//            if (isHeader(i)!!) {
-//                headerPosition = i
-//                return headerPosition
-//            }
-//        }
-//        return headerPosition
-//    }
-
-//    override fun getHeaderLayout(headerPosition: Int?): Int? {
-////        return R.layout.item_health_category
-//    }
-
-//    override fun bindHeaderData(header: View, headerPosition: Int) {
-//        val txtCategoryName: TextView = header.txtCategoryName
-//        val txtCategorySubTitle: TextView = header.txtCategorySubTitle
-//        val txtProgressCategoryText: TextView = header.txtProgressCategoryText
-//        val progressCategory: ProgressBar = header.progressCategory
-//        val relMainLayout: RelativeLayout = header.relMainLayout
-//        val imgArrow: ImageView = header.imgArrow
-//
-//        val parentObj = getItem(headerPosition ?: 0)
-//        val sec = HealthAndSafetyViewModel.Companion.SectionList.valueOf(parentObj.sectionType.toString()).ordinal
-//        txtCategoryName.text = " " + (sec + 1) + " " + parentObj.title
-//        val checkedQuest = countCheckedQuestion(getItem(headerPosition))
-//        txtCategorySubTitle.text = "     $checkedQuest Checks"
-//        txtProgressCategoryText.text = "$checkedQuest / ${parentObj.childCount}"
-//        progressCategory.max = parentObj.childCount ?: 0
-//        progressCategory.progress = checkedQuest
-//
-//        if (parentObj.isExpand == true) {
-//            imgArrow.rotation = 270f
-//        } else {
-//            imgArrow.rotation = 90f
-//        }
-//
-//        relMainLayout.setOnClickListener {
-//            if (getItem(headerPosition).isExpand == true) {
-//                imgArrow.animate().setDuration(200).rotation(90f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            } else {
-//                imgArrow.animate().setDuration(200).rotation(270f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            }
-//        }
-//
-//        header.setOnClickListener {
-//            if (getItem(headerPosition).isExpand == true) {
-//                imgArrow.animate().setDuration(200).rotation(90f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            } else {
-//                imgArrow.animate().setDuration(200).rotation(270f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            }
-//        }
-//
-//    }
-
-//    override fun isHeader(itemPosition: Int?): Boolean? {
-//        return getItem(itemPosition!!).isHeader
-//    }
-
     private fun countCheckedQuestion(item: HealthAndSafetyListData?): Int {
         var checkedQuest = 0
         var pos = item?.parentId ?: 0
@@ -306,79 +241,5 @@ class HealthSafetyStickyAdapter internal constructor() : ListAdapter<HealthAndSa
             onclickExpandCollapse(headerPosition, getItem(headerPosition))
         }
     }
-//
-//    override fun getHeaderPositionForItem(itemPosition: Int): Int {
-//        var headerPosition: Int? = 0
-//        for (i in itemPosition!! downTo 1) {
-//            if (isHeader(i)!!) {
-//                headerPosition = i
-//                return headerPosition
-//            }
-//        }
-//        return headerPosition!!
-//    }
-//
-//    override fun getHeaderLayout(headerPosition: Int): Int {
-//        return R.layout.item_health_category
-//    }
-//
-//    override fun bindHeaderData(header: View?, headerPosition: Int) {
-//        val header = header!!;
-//        val txtCategoryName: TextView = header.txtCategoryName
-//        val txtCategorySubTitle: TextView = header.txtCategorySubTitle
-//        val txtProgressCategoryText: TextView = header.txtProgressCategoryText
-//        val progressCategory: ProgressBar = header.progressCategory
-//        val relMainLayout: RelativeLayout = header.relMainLayout
-//        val imgArrow: ImageView = header.imgArrow
-//
-//        val parentObj = getItem(headerPosition ?: 0)
-//        val sec = HealthAndSafetyViewModel.Companion.SectionList.valueOf(parentObj.sectionType.toString()).ordinal
-//        txtCategoryName.text = " " + (sec + 1) + " " + parentObj.title
-//        val checkedQuest = countCheckedQuestion(getItem(headerPosition))
-//        txtCategorySubTitle.text = "     $checkedQuest Checks"
-//        txtProgressCategoryText.text = "$checkedQuest / ${parentObj.childCount}"
-//        progressCategory.max = parentObj.childCount ?: 0
-//        progressCategory.progress = checkedQuest
-//
-//        if (parentObj.isExpand == true) {
-//            imgArrow.rotation = 270f
-//        } else {
-//            imgArrow.rotation = 90f
-//        }
-//
-//        relMainLayout.setOnClickListener {
-//            if (getItem(headerPosition).isExpand == true) {
-//                imgArrow.animate().setDuration(200).rotation(90f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            } else {
-//                imgArrow.animate().setDuration(200).rotation(270f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            }
-//        }
-//
-//        header?.setOnClickListener {
-//            if (getItem(headerPosition).isExpand == true) {
-//                imgArrow.animate().setDuration(200).rotation(90f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            } else {
-//                imgArrow.animate().setDuration(200).rotation(270f)
-//                onclickExpandCollapse(headerPosition, getItem(headerPosition))
-//            }
-//        }
-//    }
-//
-//    override fun isHeader(itemPosition: Int): Boolean {
-//        return getItem(itemPosition).isHeader!!
-//    }
-//
-//    override fun onItemClicked(view: View, headerPosition: Int) {
-//        val myHeaderPosition = getHeaderPositionForItem(headerPosition)
-//        if (getItem(myHeaderPosition).isExpand == true) {
-//            view.imgArrow.animate().setDuration(200).rotation(90f)
-//            onclickExpandCollapse(myHeaderPosition, getItem(myHeaderPosition))
-//        } else {
-//            view.imgArrow.animate().setDuration(200).rotation(270f)
-//            onclickExpandCollapse(myHeaderPosition, getItem(myHeaderPosition))
-//        }
-//    }
+
 }
