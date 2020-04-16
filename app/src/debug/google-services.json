@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863161806700",
+    "firebase_url": "https://caygo-dev.firebaseio.com",
+    "project_id": "caygo-dev",
+    "storage_bucket": "caygo-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863161806700:android:87dfed3e2c17f397dd0d49",
+        "android_client_info": {
+          "package_name": "com.seachange.healthandsafty.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863161806700-ephsvkjlge1vl530i85s3b6ik6ka26u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1-FocimwSEdIkr02HnOUJLp-s-GrooJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863161806700-ephsvkjlge1vl530i85s3b6ik6ka26u7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

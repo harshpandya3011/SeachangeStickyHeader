@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.seachange.healthandsafty.activity.RAHazardsBPActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.PopupOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/hazards_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="@color/colorDefaultYellow"
+            android:theme="@style/ThemeToolbarDarkOverflow"
+            app:popupTheme="@style/MyAppTheme.PopupOverlay"
+            app:titleTextColor="@color/alertTitle"
+            app:title="@string/title_activity_rahazards"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bar_grey"
+            app:tabTextColor="@color/alertTitle"
+            app:tabSelectedTextColor="@color/alertTitle"
+            app:tabIndicatorColor="@color/alertTitle"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabPaddingStart="-1dp"
+            app:tabPaddingEnd="-1dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/alertTitle"
+        android:text="Tap the button below to capture a new hazard or best practice."/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hazard_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorDefaultGreen"
+        app:srcCompat="@mipmap/baseline_add_white_48dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

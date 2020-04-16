@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seachange.healthandsafty.nfconboard.NFCOnBoardingWelcomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/nfc_logout_hazard"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/logout"
+            android:textColor="@color/colorDefaultYellow"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/nfc_welcome_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Hi John,"
+                android:textColor="@color/alertTitle"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/image_content"
+                android:src="@mipmap/logo" />
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/welcome_to_caygo"
+                android:textColor="@color/alertTitle"/>
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="@string/to_begin_we_need_to_setup_your_site"
+                android:textColor="@color/alertTitle"/>
+
+
+            <TextView
+                android:id="@+id/welcome_clock_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/fa_timer"
+                android:textColor="@color/alertContent"
+                android:textSize="30dp" />
+
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:text="@string/this_will_take_just_few_minutes"
+                android:textColor="@color/alertTitle"
+                android:layout_marginBottom="50dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/welcome_start_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorDefaultGreen"
+            android:text="@string/let_s_get_started"
+            android:textColor="@color/sysWhite"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

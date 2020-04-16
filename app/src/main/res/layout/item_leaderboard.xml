@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--TODO progress bar design setup-->
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/progress_leaderboard_check_compliance_background"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mpb_progressBackgroundTint="@color/sysWhite"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_useIntrinsicPadding="false"
+        tools:mpb_progressTint="@color/yellowTransparent"
+        tools:progress="12" />
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/progress_leaderboard_check_compliance_bottom"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        android:indeterminate="false"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier_leader_board"
+        app:mpb_progressBackgroundTint="@color/sysWhite"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_useIntrinsicPadding="false"
+        tools:mpb_progressTint="@color/colorPrimary"
+        tools:progress="12" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_leaderboard_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_leaderboard_name"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/sysBlack"
+        app:layout_constraintEnd_toStartOf="@+id/tv_leaderboard_overall_score"
+        app:layout_constraintStart_toEndOf="@+id/tv_leaderboard_number"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_compliance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/sysBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_leaderboard_name"
+        app:layout_constraintEnd_toEndOf="@+id/tv_leaderboard_overall_score"
+        app:layout_constraintStart_toStartOf="@+id/tv_leaderboard_overall_score"
+        app:layout_constraintTop_toTopOf="@+id/tv_leaderboard_name"
+        tools:text="100%" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_overall_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/overall_score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leaderboard_compliance_value" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_check_compliance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/tv_leaderboard_check_compliance"
+        app:layout_constraintStart_toStartOf="@+id/tv_leaderboard_check_compliance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leaderboard_name"
+        tools:text="100%" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_check_compliance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:gravity="center_horizontal"
+        android:text="@string/check_compliance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toStartOf="@+id/tv_leaderboard_tour_compliance_hazards"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/tv_leaderboard_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leaderboard_check_compliance_value"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="84dp" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_tour_compliance_hazards_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/tv_leaderboard_tour_compliance_hazards"
+        app:layout_constraintStart_toStartOf="@+id/tv_leaderboard_tour_compliance_hazards"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leaderboard_name"
+        tools:text="100%" />
+
+    <TextView
+        android:id="@+id/tv_leaderboard_tour_compliance_hazards"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toStartOf="@+id/tv_leaderboard_overall_score"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/tv_leaderboard_check_compliance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leaderboard_tour_compliance_hazards_value"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="84dp"
+        tools:text="@string/tour_compliance" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_leader_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_leaderboard_check_compliance,tv_leaderboard_tour_compliance_hazards" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

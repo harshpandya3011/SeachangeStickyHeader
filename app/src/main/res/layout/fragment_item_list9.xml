@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.seachange.healthandsafty.fragment.IrregularScheduleTimeFragment">
+
+    <RelativeLayout
+        android:id="@+id/irregular_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/irregular_scheduled_time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/alertTitle"
+            android:fontFamily="sans-serif-medium"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/fa_calendar"
+            android:textColor="@color/alertTitle"
+            android:textSize="30dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/irregular_time_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/irregular_scheduled_time_picker"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_item9" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_empty_view"
+            android:visibility="gone"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/irregular_scheduled_time_picker"
+            android:textSize="18sp"
+            android:textColor="@color/alertTitle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bar_grey"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/schedule_save_button"
+            style="@style/MaterialButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/save_settings"
+            android:textColor="@color/sysWhite"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold" />
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:id="@+id/progress_add_schedule_irregular"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            app:mpb_indeterminateTint="@color/sysWhite"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_irregular_scheduled_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/colorDefaultGreen"
+        app:srcCompat="@drawable/ic_add_white_24dp"
+        app:tint="@color/sysWhite"
+        android:layout_marginBottom="80dp"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/irregular_snack_ref"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="145dp">
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

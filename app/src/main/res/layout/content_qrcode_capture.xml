@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sysBlack"
+    android:keepScreenOn="true">
+
+    <com.seachange.healthandsafty.qrcode.ui.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.seachange.healthandsafty.qrcode.ui.camera.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.seachange.healthandsafty.qrcode.ScannerOverlay
+            android:id="@+id/scanOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000"
+            app:line_color="@color/colorDefaultGreen"
+            app:line_speed="3"
+            app:line_width="3"
+            app:square_height="250"
+            app:square_width="250" />
+
+    </com.seachange.healthandsafty.qrcode.ui.camera.CameraSourcePreview>
+
+</LinearLayout>

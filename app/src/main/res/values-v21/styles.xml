@@ -1,0 +1,44 @@
+<resources>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="actionBarTheme">@style/AppTheme.Title</item>
+
+    </style>
+
+    <style name="AppTheme.Title" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColor">@color/alertTitle</item>
+    </style>
+
+    <style name="AccentButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/colorDefaultGreen</item>
+        <item name="colorAccent">@color/colorDefaultGreen</item>
+        <item name="android:textColor">@color/sysWhite</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/alertTitle</item>
+        <item name="colorControlActivated">@color/alertTitle</item>
+    </style>
+
+    <style name="ThemeOverlay.MySwitch" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/colorDefaultGreen</item>
+    </style>
+
+    <style name="MySwitchCompat" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorDefaultGreen</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+</resources>

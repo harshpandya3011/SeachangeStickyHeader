@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/sysWhite"
+    tools:context="com.seachange.healthandsafty.fragment.ViewScheduledZonesFragment">
+
+    <com.seachange.healthandsafty.helper.View.AnimatedExpandableListView
+        android:id="@+id/expandableListViewScheduledZones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/sysWhite"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bar_grey"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/schedule_copy_save_button"
+            style="@style/MaterialButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/copy_button"
+            android:textColor="@color/sysWhite"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

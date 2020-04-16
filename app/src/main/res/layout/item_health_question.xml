@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relChildMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sysWhite"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/btnYes"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtQuestionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/alertTitle"
+            android:textSize="@dimen/sp_16"
+            tools:text="category name" />
+
+        <TextView
+            android:id="@+id/txtQuestionSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checked_amp_ok"
+            android:textColor="@color/sysBlack"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnYes"
+        style="@style/healthSafetyCheckYesButtonSelection"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/btnNo"
+        android:gravity="center"
+        android:text="YES" />
+
+    <TextView
+        android:id="@+id/btnNo"
+        style="@style/healthSafetyCheckNoButtonSelection"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/dp_1"
+        android:gravity="center"
+        android:text="NO" />
+
+</RelativeLayout>

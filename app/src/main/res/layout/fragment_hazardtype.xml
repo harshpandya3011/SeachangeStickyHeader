@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hazard_type_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:id="@+id/type_box_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDefaultYellow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/type_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:layout_marginTop="@dimen/text_margin"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:letterSpacing=".05"
+                android:maxLines="5"
+                android:text="obstruction"
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/sysWhite"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hazard_type_back_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/shadow_yellow">
+
+            <TextView
+                android:id="@+id/hazard_type_source_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:letterSpacing=".05"
+                android:maxLines="1"
+                android:text="obsctruction"
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/sub_text_yellow"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <!--<TextView-->
+        <!--android:id="@+id/ra_icon_name"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginBottom="16dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:background="@drawable/ra_circle"-->
+        <!--android:gravity="center"-->
+        <!--android:textAppearance="?attr/textAppearanceListItem"-->
+        <!--android:textColor="@color/sysWhite"-->
+        <!--android:textSize="20dp"-->
+        <!--android:textStyle="bold" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ra_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ra_circle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ra_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ra_title_content"
+            style="@style/SubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Supervalue Malahide"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/alertTitle"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/ra_date"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Today, 20 Aug 2018"
+            android:textColor="@color/alertContent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ra_site"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="Full Site"
+                android:textColor="@color/alertContent" />
+
+            <View
+                android:id="@+id/ra_line_break"
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:background="@color/text_grey" />
+
+            <TextView
+                android:id="@+id/ra_status"
+                style="@style/ListTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="In Progress"
+                android:textColor="@color/text_grey" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_select_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textColor="@color/arrow_grey"
+        android:textSize="30dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/listLineGrey" />
+
+</RelativeLayout>

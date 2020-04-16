@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_gravity="fill_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/nfc_tag_default_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nfc_write_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/fa_tab_play"
+            android:textColor="@color/alertTitle"
+            android:textSize="32dp"
+            android:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/nfc_dialog_write_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Tap NFC Tag Now to Setup Point A"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/alertTitle"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/nfc_write_view_anim_rel"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="110dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iphone_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/i_phone_hand"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"/>
+
+        <com.seachange.healthandsafty.nfc.view.DrawDottedCurve
+            android:id="@+id/curve_view"
+            android:layout_width="105dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@+id/iphone_hand"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_toEndOf="@id/curve_view"
+            android:src="@mipmap/i_nfc_tag"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:textColor="@color/alertTitle"
+        android:textSize="18dp"
+        android:text="@string/message_tap_tag"/>
+
+
+    <Button
+        android:id="@+id/nfc_tag_write_close"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        android:textColor="@color/colorDefaultYellow"
+        android:textSize="17dp" />
+
+</LinearLayout>

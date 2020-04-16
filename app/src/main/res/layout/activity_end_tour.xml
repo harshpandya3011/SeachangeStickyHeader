@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/end_grey"
+    tools:context="com.seachange.healthandsafty.activity.EndTourActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_assignment_turned_in_white_48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Title"
+            android:text="Today's Tour Complete"
+            android:textColor="@color/sysWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/end_tour_name"
+            style="@style/HeadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Nice Work Kevin!"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textColor="@color/sysWhite" />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+
+            android:paddingTop="45dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/HeadLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:textColor="@color/sysWhite" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/8"
+                        android:textColor="@color/sysWhite"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Zones Checked"
+                    android:textColor="@color/sysWhite" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/end_line_grey" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/HeadLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="12"
+                    android:textColor="@color/sysWhite" />
+
+
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Hazards Found"
+                    android:textColor="@color/sysWhite" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_sub_title"
+            android:layout_marginTop="45dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ProgressBar
+                    android:id="@+id/home_compliance_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-25dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="90"
+                    android:progressDrawable="@drawable/circular_grey"
+                    android:secondaryProgress="100" />
+
+
+                <TextView
+                    android:id="@+id/home_check_compliance"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:gravity="center"
+                    android:text="100%"
+                    android:textColor="@color/sysWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_check_compliance"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="Check Compliance Today"
+                    android:textColor="@color/sysWhite" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/end_tour_close"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/sysWhite"
+        android:text="Continue"
+        android:textColor="@color/sysBlack"
+        android:textSize="14dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seachange.healthandsafty.activity.EndCheckActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/end_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/end_check_user_header"
+                style="@style/HeadLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="56dp"
+                android:text="Nice Work Kevin!"
+                android:textSize="24dp"
+                android:textColor="@color/sysWhite" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-3dp"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_face_white_48dp" />
+
+                <TextView
+                    android:id="@+id/end_check_user_name"
+                    style="@style/SubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Kevin Song"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/sysWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HeadLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="8"
+                        android:textColor="@color/sysWhite" />
+
+                    <TextView
+                        style="@style/Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Checks"
+                        android:textColor="@color/sysWhite"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/end_line_grey" />
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/HeadLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/sysWhite"/>
+
+                        <TextView
+                            style="@style/Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/9"
+                            android:textColor="@color/sysWhite"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        style="@style/Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Staff Rank"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/sysWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-2dp"
+                    android:src="@mipmap/ic_location_on_white_48dp" />
+
+                <TextView
+                    android:id="@+id/end_check_zone_sub_title"
+                    style="@style/SubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Deli"
+                    android:textColor="@color/sysWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_sub_title"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/home_streak"
+                        style="@style/HeadLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="23"
+                        android:textColor="@color/sysWhite" />
+
+                    <TextView
+                        style="@style/Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_streak"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Check Streak"
+                        android:textColor="@color/sysWhite" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/end_line_grey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+
+                    <ProgressBar
+                        android:id="@+id/home_compliance_progressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-25dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="90"
+                        android:progressDrawable="@drawable/circular_grey"
+                        android:secondaryProgress="100" />
+
+
+                    <TextView
+                        android:id="@+id/home_check_compliance"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textColor="@color/sysWhite"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        style="@style/Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_check_compliance"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:maxLines="1"
+                        android:text="Check Compliance"
+                        android:textColor="@color/sysWhite" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:id="@+id/end_zone_check_rel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/sysWhite"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="/5"
+                            android:textColor="@color/sysWhite"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/end_zone_check_rel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:text="Zone Rank"
+                        android:textColor="@color/sysWhite" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/end_line_grey" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/ic_assignment_turned_in_white_48dp" />
+
+            <TextView
+                style="@style/SubTitle"
+                android:id="@+id/end_check_zone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Deli"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/sysWhite"/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Check Complete"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/sysWhite" />
+
+            <TextView
+                android:id="@+id/zone_check_time"
+                style="@style/SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="2m 45s"
+                android:textColor="@color/sysWhite" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/end_check_close"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/sysWhite"
+            android:text="Continue"
+            android:textColor="@color/sysBlack"
+            android:textSize="14dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

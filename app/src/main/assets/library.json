@@ -1,0 +1,344 @@
+[{
+  "id": 1,
+  "name": "Obstruction",
+  "hazardTypes": [{
+    "id": 20,
+    "name": "Stock"
+  },
+    {
+      "id": 21,
+      "name": "Basket"
+    },
+    {
+      "id": 22,
+      "name": "Display"
+    },
+    {
+      "id": 23,
+      "name": "Trolley"
+    },
+    {
+      "id": 24,
+      "name": "Furniture"
+    },
+    {
+      "id": 25,
+      "name": "Clutter"
+    },
+    {
+      "id": 26,
+      "name": "Pallet"
+    },
+    {
+      "id": 27,
+      "name": "Combi/cage"
+    },
+    {
+      "id": 28,
+      "name": "Equipment"
+    },
+    {
+      "id": 29,
+      "name": "Stool"
+    },
+    {
+      "id": 30,
+      "name": "Ladder"
+    },
+    {
+      "id": 31,
+      "name": "Wet Floor Signage"
+    }
+  ]
+},
+  {
+    "id": 2,
+    "name": "Uneven Surface",
+    "hazardTypes": [{
+      "id": 32,
+      "name": "Raised flooring"
+    },
+      {
+        "id": 33,
+        "name": "Pothole"
+      },
+      {
+        "id": 34,
+        "name": "Uneven matting"
+      },
+      {
+        "id": 35,
+        "name": "Step with no signage"
+      },
+      {
+        "id": 36,
+        "name": "Damaged flooring"
+      },
+      {
+        "id": 37,
+        "name": "Gradient with no signage"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Loose Packaging",
+    "hazardTypes": [{
+      "id": 38,
+      "name": "Bindings"
+    },
+      {
+        "id": 39,
+        "name": "Cardboard boxes"
+      },
+      {
+        "id": 40,
+        "name": "Plastic packaging"
+      },
+      {
+        "id": 41,
+        "name": "Loose Packaging Bags"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Trailing Cables",
+    "hazardTypes": [{
+      "id": 42,
+      "name": "Electrical"
+    },
+      {
+        "id": 43,
+        "name": "Refrigeration"
+      },
+      {
+        "id": 44,
+        "name": "Computer"
+      },
+      {
+        "id": 45,
+        "name": "Equipment"
+      },
+      {
+        "id": 46,
+        "name": "Heating"
+      },
+      {
+        "id": 47,
+        "name": "Contractor equipment"
+      },
+      {
+        "id": 48,
+        "name": "TV"
+      },
+      {
+        "id": 49,
+        "name": "Food display counter"
+      },
+      {
+        "id": 50,
+        "name": "CCTV"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Wet Surface",
+    "hazardTypes": [{
+      "id": 51,
+      "name": "Rain"
+    },
+      {
+        "id": 52,
+        "name": "Ice"
+      },
+      {
+        "id": 53,
+        "name": "Snow"
+      },
+      {
+        "id": 54,
+        "name": "Condensation"
+      },
+      {
+        "id": 55,
+        "name": "Liquid-based product"
+      },
+      {
+        "id": 56,
+        "name": "Oil"
+      },
+      {
+        "id": 57,
+        "name": "Blood"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Dry Spillage",
+    "hazardTypes": [{
+      "id": 58,
+      "name": "Beans/grains/cereals"
+    },
+      {
+        "id": 59,
+        "name": "Powder"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Loose Stock",
+    "hazardTypes": [{
+      "id": 60,
+      "name": "Shelving"
+    },
+      {
+        "id": 61,
+        "name": "Wear & tear"
+      },
+      {
+        "id": 62,
+        "name": "Delivery"
+      },
+      {
+        "id": 63,
+        "name": "Open drawers"
+      },
+      {
+        "id": 64,
+        "name": "Loose hooks"
+      },
+      {
+        "id": 65,
+        "name": "Domestic products"
+      },
+      {
+        "id": 66,
+        "name": "Box"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Debris",
+    "hazardTypes": [{
+      "id": 67,
+      "name": "Product wrapping"
+    },
+      {
+        "id": 68,
+        "name": "Paper"
+      },
+      {
+        "id": 69,
+        "name": "Receipts"
+      },
+      {
+        "id": 70,
+        "name": "Leaflets"
+      },
+      {
+        "id": 71,
+        "name": "Shelf talkers/labels"
+      },
+      {
+        "id": 72,
+        "name": "General rubbish"
+      },
+      {
+        "id": 73,
+        "name": "Grit"
+      },
+      {
+        "id": 74,
+        "name": "Leaves"
+      },
+      {
+        "id": 75,
+        "name": "Blocked drains"
+      },
+      {
+        "id": 76,
+        "name": "Gravel"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Food/ Drink Items",
+    "hazardTypes": [{
+      "id": 77,
+      "name": "Fruit"
+    },
+      {
+        "id": 78,
+        "name": "Vegetable"
+      },
+      {
+        "id": 79,
+        "name": "Dairy"
+      },
+      {
+        "id": 80,
+        "name": "Meat"
+      },
+      {
+        "id": 81,
+        "name": "Confectionary"
+      },
+      {
+        "id": 82,
+        "name": "Refrigerated/frozen"
+      },
+      {
+        "id": 83,
+        "name": "Bottled drink"
+      },
+      {
+        "id": 84,
+        "name": "Cartoned/canned drink"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Lighting",
+    "hazardTypes": [{
+      "id": 85,
+      "name": "Low visibility"
+    },
+      {
+        "id": 86,
+        "name": "Damaged bulb"
+      },
+      {
+        "id": 87,
+        "name": "No light"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Housekeeping",
+    "hazardTypes": [{
+      "id": 88,
+      "name": "General housekeeping standards are poor in this area"
+    },
+      {
+        "id": 89,
+        "name": "PPE Staff not provided anti-slip safety footwear Personal Protective Equipment (PPE)"
+      },
+      {
+        "id": 90,
+        "name": "PPE Staff not wearing anti-slip safety footwear Personal Protective Equipment (PPE)"
+      },
+      {
+        "id": 91,
+        "name": "Training Staff response to spill is inadequate e.g. staff leaving spill unattended to go for signage"
+      }
+    ]
+  }
+]

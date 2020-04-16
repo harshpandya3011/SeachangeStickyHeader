@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clickable_header"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/rvChildList"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_ripple_grey"
+            android:padding="@dimen/dp_10">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_1"
+                android:layout_toStartOf="@+id/imgTag"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/alertTitle"
+                    android:textSize="@dimen/sp_16"
+                    tools:text="category name" />
+
+                <TextView
+                    android:id="@+id/txtCategorySubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/alertContent"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="Rank 1 | 15 Checks" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgTag"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_1"
+                android:layout_toStartOf="@+id/relProgress"
+                android:layout_toLeftOf="@+id/relProgress"
+                android:src="@drawable/ic_tag"
+                android:tint="@color/black_alpha_72" />
+
+            <RelativeLayout
+                android:id="@+id/relProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_toLeftOf="@+id/imgArrow">
+
+                <ProgressBar
+                    android:id="@+id/progressCategory"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="90"
+                    android:progressDrawable="@drawable/circular_progress_health"
+                    android:secondaryProgress="100" />
+
+                <TextView
+                    android:id="@+id/txtProgressCategoryText"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_centerInParent="true"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="99/99"
+                    android:textColor="@color/black_alpha_72"
+                    android:textSize="@dimen/sp_10"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:rotation="90"
+                android:src="@drawable/mcv_action_next" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChildList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linMainLayout"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_health_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

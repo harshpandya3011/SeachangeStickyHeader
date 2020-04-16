@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Caygo.iml" filepath="$PROJECT_DIR$/.idea/Caygo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Client.Caygo.Android.iml" filepath="$PROJECT_DIR$/Client.Caygo.Android.iml" group="Client.Caygo.Android" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Client.Caygo.Android/app" />
+      <module fileurl="file://$PROJECT_DIR$/caygo.iml" filepath="$PROJECT_DIR$/caygo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/caygo-app.iml" filepath="$PROJECT_DIR$/app/caygo-app.iml" />
+    </modules>
+  </component>
+</project>

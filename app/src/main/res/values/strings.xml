@@ -1,0 +1,397 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <bool name="cameraPreviewShouldFillView">true</bool>
+    <plurals name="plural_sites">
+        <item quantity="one">%d Site</item>
+        <item quantity="other">%d Sites</item>
+    </plurals>
+    <plurals name="plural_zones">
+        <item quantity="one">%d Zone</item>
+        <item quantity="other">%d Zones</item>
+    </plurals>
+    <string name="app_name">CAYGO</string>
+    <string name="caygo">CAYGO</string>
+    <string name="title_home">Home</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="today_schedule">Today’s Schedule</string>
+    <string name="title_site">Site</string>
+    <string name="title_group">Group</string>
+    <string name="caygo_tour">Zone Check</string>
+    <string name="manager_tour">CAYGO Site Tour</string>
+    <string name="chronometer_initial_format"><xliff:g id="initial-format">%s</xliff:g></string>
+    <string name="hazard">Hazards</string>
+    <string name="check_add_hazard">Address Hazard</string>
+    <string name="add_hazard">Hazard(s) Addressed</string>
+    <string name="end_tour">End Check</string>
+    <string name="select_hazard">Select Hazard</string>
+    <string name="frequently_used">Frequently Found Hazards</string>
+    <string name="hazard_sources">Hazard Categories</string>
+    <string name="hazard_category">Hazard Category</string>
+    <string name="hazard_type">Hazards</string>
+    <string name="source_transition">Source Transition</string>
+    <string name="source_transition_title">Source Transition Title</string>
+    <string name="source_transition_background">Source Transition BackGround</string>
+    <string name="title_activity_manager_tour">ManagerTourActivity</string>
+    <string name="zone">Zones</string>
+    <string name="manager_end_tour">End Tour</string>
+
+    <!--login-->
+    <string name="image_content">image content</string>
+    <string name="hazard_boxes">Hazard Boxes</string>
+    <string name="continue_on">Continue</string>
+    <string name="email_place_holder">myname@mycompany.com</string>
+    <string name="sea">Sea</string>
+    <string name="change">Change</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="button_continue">continue</string>
+    <string name="mail_sent">Email sent</string>
+    <string name="name_sub">. Please check your inbox and click on the link provided. \n\n It may take a few minutes for this email to arrive. Remember to check your spam or junk folders.</string>
+    <string name="name_start">An email has been sent to you at</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="enter_new_password">Enter a new password</string>
+    <string name="email_instruction">Enter your email and we’ll send you instructions.</string>
+    <string name="ok">OK</string>
+
+    <!--home screen-->
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+
+
+    <!-- Strings related to login -->
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="title_activity_caygo_home">CaygoHomeActivity</string>
+    <string name="title_next_check">Next Zone Checks</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="toggle_flash">Flash</string>
+    <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera.</string>
+    <string name="camera_permission_not_granted">Camera app cannot do anything without camera permission.</string>
+    <string name="picture_taken">Picture taken</string>
+    <string name="aspect_ratio">Aspect ratio</string>
+    <string name="switch_flash">Switch flash</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="flash_auto">Flash auto</string>
+    <string name="flash_off">Flash off</string>
+    <string name="flash_on">Flash on</string>
+    <string name="auto_focus_on">Auto Focus [ON]</string>
+    <string name="auto_focus_off">Auto Focus [OFF]</string>
+
+    <string name="formats">Formats</string>
+    <string name="choose_formats">Choose Formats</string>
+    <string name="select_camera">Select a Camera</string>
+
+
+    <!--buttons-->
+    <string name="title_activity_qrcode_capture">QRCodeCaptureActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="ok_button">OK</string>
+
+    <!--nfc strings    -->
+    <string name="cancel_button">Cancel</string>
+    <string name="close_button">Close</string>
+    <string name="message_write_error">Error Writing Message !</string>
+    <string name="message_write_success">Successfully written to Tag !</string>
+    <string name="message_write_progress">Writing to Tag..</string>
+    <string name="message_tag_detected">NFC Tag Detected !</string>
+    <string name="message_read_tag">Tap NFC Tag Now to Read</string>
+    <string name="message_write_tag">Write to NFC Tag</string>
+    <string name="message_start_tag">Tap NFC Tag to Start</string>
+    <string name="message_end_tag">Tap NFC Tag to End</string>
+
+
+    <string name="no_schedule_zones">There are currently no zones available for your site. \n\nPlease contact SeaChange to have zones added. </string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="message_tap_tag">The tag may not be writable or it may be damaged. Please try another tag.</string>
+
+    <string name="hint_message">Message</string>
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable Scan QRCode</string>
+    <string name="pref_description_social_recommendations">Scan QRCode to start and end check and tour
+    </string>
+
+    <string name="pref_title_passcode">Enable Passcode</string>
+    <string name="pref_description_passcode">Enable Passcode to start check</string>
+
+    <string name="pref_title_offline">Enable Offline</string>
+    <string name="pref_description_offline">Enable Offline Mode</string>
+
+    <string name="pref_title_dev">Dev</string>
+    <string name="pref_description_dev">Dev Environment</string>
+
+    <string name="pref_nfc">Enable NFC</string>
+    <string name="pref_description_nfc">Enable NFC Scan</string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="title_activity_ramain">RAMainActivity</string>
+
+    <string name="title_activity_rahazards">RAHazardsActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="noscheduletoday">There is no schedule yet for today.</string>
+    <string name="noscheduleyet">There is no schedule yet.</string>
+    <string name="check_hazard_no_data">We\'re sorry. Currently you can only view Zone Check information for Zone Checks completed since Sat, 25 Aug 2018.\n\nWe will soon make the information from this Zone Check available. In the mean time, If you need this information please contact Emmet at emmet.donnelly@seachange-intl.com or 086 192 1957.</string>
+    <string name="no_more_schedule_checks">There are no more Zone Checks scheduled for today.</string>
+    <string name="caygo_home_not_started_yet">Zone Checks start today in:</string>
+    <string name="caygo_home_no_data_found">We could not retrieve today’s schedule from the cloud. \n\nPlease ensure you have a good internet connection and pull down on the screen to try again. </string>
+    <string name="caygo_home_no_data_returned">There is no schedule for today. We connected to the cloud okay but there is no data. \n\nPlease contact SeaChange to schedule Zone Checks.</string>
+    <string name="zero_checks">0 Zones Checked</string>
+    <string name="hazards_addressed">Hazards Addressed</string>
+    <string name="started">Started</string>
+    <string name="completed">Completed</string>
+    <string name="duration">Duration</string>
+    <string name="zone_check">Zone Check</string>
+    <string name="title_activity_user_settings">UserSettingsActivity</string>
+    <string name="title_activity_add_user">AddUserActivity</string>
+    <string name="caygo_manager">CAYGO Manager</string>
+    <string name="caygo_champion">CAYGO Champion</string>
+    <string name="temp_passcode">Temporay Passcode</string>
+    <string name="edit_user">Edit User</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_compliance">Check Compliance</string>
+    <string name="tour_hazards">Tour Hazards</string>
+    <string name="there_is_no_schedule_yet_for_today">There is no schedule yet for today.</string>
+    <string name="site_tour">Site Tour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="default_time">00:00</string>
+    <string name="default_offline_text">Working Offline. 0 Checks | 0 Tour</string>
+    <string name="syncing">Syncing</string>
+    <string name="add_user">Add User</string>
+    <string name="site_dashboard">Site Dashboard</string>
+    <string name="group_dashboard">Group Dashboard</string>
+    <string name="site_tours">Site Tours</string>
+    <string name="scheduled_tours">Scheduled Tours</string>
+    <string name="completed_tours">Completed Tours</string>
+
+    <string name="tour_compliance">Tour Compliance</string>
+    <string name="zone_checks">Zone Checks</string>
+    <string name="scheduled_checks">Scheduled Checks</string>
+    <string name="completed_checks">Completed Checks</string>
+    <string name="check_hazards">Check Hazards</string>
+    <string name="one_site">1 Site</string>
+    <string name="zones_leader_board">Zones Leaderboard</string>
+    <string name="sites_leader_board">Sites Leaderboard</string>
+    <string name="two_value_with_dash">%1$s - %2$s</string>
+    <string name="two_value_with_dash_in_two_lines">\u0020\u0020%1$s\n- %2$s</string>
+    <string name="dash">-</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="comma_separated_value">%1$,d</string>
+    <string name="today_cap">TODAY</string>
+    <string name="week_cap">WEEK</string>
+    <string name="month_cap">MONTH</string>
+    <string name="year_cap">YEAR</string>
+    <string name="overall_score">Overall Score</string>
+
+    <string name="close">Close</string>
+    <string name="timeout_error_title">Action Timed Out</string>
+    <string name="permission_denied_error_title">Permission Denied</string>
+    <string name="timeout_error">This is likely due to low connection strength. Please check your connection and try again.</string>
+    <string name="permission_denied_error">You do not have access to this feature. Please contact your system administrator to proceed.</string>
+    <string name="no_connection_error_title">No Connection</string>
+    <string name="no_connection_error">You appear to be offline. Please check your internet connection and try again.</string>
+    <string name="server_error_title">We’re sorry. This is not working properly.</string>
+
+    <!--Web Service Errors-->
+    <string name="server_error">We have been notified of this mistake and we are working to fix it.
+        \n\nIn the meantime, you could try again after a few seconds (sometimes this works).</string>
+    <string name="site_dashboard_no_data_available">Sorry, there is currently no report data for your selected date(s). Please pull down on your screen to try again.</string>
+    <string name="site_dashboard_error">No data. Ensure you have an internet connection and pull down the screen to try again</string>
+    <string name="offline">Offline</string>
+    <string name="sync_info_content">You can continue to complete Zone Checks and Site Tours while offline. However, please sync regularly to avoid losing any data.</string>
+    <string name="sync_data">Unsynced Data</string>
+    <string name="sync_info_content_online">You have unsynced data. Please tap on the sync now button below.</string>
+    <string name="start_end_points">Select a Point to Setup</string>
+    <string name="write_tag_error">Sorry, We Could Not Write to This Tag</string>
+    <string name="empty_tag">Empty Tag</string>
+    <string name="wrong_data_tag">We don’t recognize this tag’s data</string>
+    <string name="close_btn">Close</string>
+    <string name="try_again_btn">TRY AGAIN</string>
+    <string name="remove">REMOVE</string>
+    <string name="edit">EDIT</string>
+    <string name="reset_passcode">RESET\nPASSCODE</string>
+    <string name="cd_user_type">User Type</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="portal_user">Portal User</string>
+    <string name="mobile_only">Mobile Only</string>
+    <string name="email">Email</string>
+    <string name="remove_user">Remove User</string>
+    <string name="temporary_passcode">Temporary Passcode</string>
+    <string name="msg_remove_user">Are you sure you want to remove %1$s from your site?</string>
+    <string name="not_assigned">Not Assigned</string>
+    <string name="temp_value">Temp. %1$s</string>
+    <string name="update_user">Update user</string>
+    <string name="user_added_successfully">User added successfully</string>
+    <string name="user_deleted_successfully">User deleted successfully</string>
+    <string name="user_updated_successfully">User updated successfully</string>
+    <string name="cd_close">@string/close</string>
+
+    <string name="value_enter_new_pass_code">%1$s, please enter your new passcode and be sure to remember it.</string>
+    <string name="enter_your_pass_code_value">Enter your passcode %s</string>
+    <string name="please_try_again_value">Please try again %1$s</string>
+    <string name="well_done">Well Done!</string>
+    <string name="successfully_set_up_passcode">You have successfully set up your new passcode.</string>
+    <string name="proceed">Proceed</string>
+    <string name="msg_entered_temp_passcode">You have entered a temporary passcode. Please proceed to set up your new passcode.</string>
+    <string name="new_passcode">New Passcode</string>
+    <string name="version_value">Version %1$s</string>
+
+    <string name="title_activity_schedule_zone_tab">ScheduleZoneTabActivity</string>
+    <string name="tab_text_1">M</string>
+    <string name="tab_text_2">T</string>
+    <string name="tab_text_3">W</string>
+    <string name="tab_text_4">T</string>
+    <string name="tab_text_5">F</string>
+    <string name="tab_text_6">S</string>
+    <string name="tab_text_7">S</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="edit_tv">EDIT</string>
+    <string name="regular_schedule">Regular Schedule</string>
+    <string name="irregular_schedule">Irregular Schedule</string>
+    <string name="add_tv">ADD</string>
+    <string name="scheduled_zones">Scheduled Zones</string>
+    <string name="unscheduled_zones">Unscheduled Zones</string>
+    <string name="let_s_go">Let\'s Go</string>
+    <string name="site_setup_complete">Site Setup Complete</string>
+    <string name="no_scheduled_zones">There are currently no zones available for your site. \n\nPlease contact SeaChange to have zones added.</string>
+    <string name="copy_button">Copy</string>
+    <string name="start_time">Start Time</string>
+    <string name="frequency">Frequency</string>
+    <string name="add_time_range">Add Time Range</string>
+    <string name="edit_time_range">Edit Time Range</string>
+    <string name="end_time">End Time</string>
+    <string name="end_time_is_next_day">End time is next day</string>
+    <string name="schedule_empty_view">Please tap on the button below to add a time range for this date.</string>
+    <string name="not_scheduled">Not Scheduled</string>
+    <string name="welcome_to_caygo">Welcome to CAYGO</string>
+    <string name="to_begin_we_need_to_setup_your_site">To begin we need to setup your site</string>
+    <string name="this_will_take_just_few_minutes">This will take just few minutes</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="logout">Logout</string>
+    <string name="let_s_setup_the_nfc_tags_for_your_site_s_zones">Let\'s setup the NFC tags for your site\'s zones</string>
+    <string name="you_will_need">You will need</string>
+    <string name="rewritable_nfc_tags">rewritable NFC tags</string>
+    <string name="i_have_my_nfc_tags">I Have My NFC Tags</string>
+    <string name="passcode">Passcode</string>
+    <string name="remove_zone_schedule">Remove Schedule</string>
+    <string name="msg_remove_zone_schedule">Are you sure you want to remove the %1$s schedule?</string>
+    <string name="schedule_setting_saved">Settings saved successfully</string>
+    <string name="tag_connection_lost_title">Connection Lost</string>
+    <string name="tag_connection_lost_message">NFC-tag connection is lost. Please hold NFC tag behind the top of your phone.</string>
+    <string name="tag_connection_lost_content">Connection lost with the NFC tag. To update tag please try to hold the device and tag steady.</string>
+    <string name="clock_error">Invalid Date &amp; Time</string>
+    <string name="clock_error_msg">To use the CAYGO app please go to your device settings and set the Date &amp; Time to \'Automatic\'.</string>
+    <string name="adjust_date">SET DATE &amp; TIME</string>
+    <string name="check_list">Check list</string>
+    <string name="app_version">App Version</string>
+    <string name="schedule_zones">Schedule Zones</string>
+    <string name="read_nfc_tag">Read NFC Tag</string>
+    <string name="nfc_tag_setup">NFC Tag Setup</string>
+    <string name="settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="checked_amp_ok">checked &amp; OK</string>
+    <string name="check_list_templates">Checklist Templates</string>
+    <string name="title">Title</string>
+    <string name="weekly_health_amp_safety_checklist"><![CDATA[Weekly Health & Safety Checklist]]></string>
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="pref_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <!--    schedule frequency-->
+    <string-array name="pref_schedule_frequency">
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>4 hours</item>
+        <item>5 hours</item>
+        <item>6 hours</item>
+        <!--        <item>7 hours</item>-->
+        <!--        <item>8 hours</item>-->
+    </string-array>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="multi_select_list_preference_default_value" />
+
+</resources>

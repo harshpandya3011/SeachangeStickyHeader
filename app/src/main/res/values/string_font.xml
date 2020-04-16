@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--font awesome-->
+    <string name="fa_check">&#xf26b;</string>
+    <string name="fa_right_arrow">&#xf2fb;</string>
+    <string name="fa_left_arrow">&#xf2ea;</string>
+    <string name="fa_home">&#xf175;</string>
+    <string name="fa_chevron_left">&#xf2fa;</string>
+    <string name="fa_chevron_right">&#xf2fb;</string>
+    <string name="fa_chevron_up">&#xf2fc;</string>
+    <string name="fa_chevron_down">&#xf2f9;</string>
+    <string name="fa_close">&#xf136;</string>
+    <string name="fa_mail">&#xf15a;</string>
+    <string name="fa_lock">&#xf191;</string>
+    <string name="fa_eye">&#xf15c;</string>
+    <string name="fa_eye_off">&#xf15b;</string>
+    <string name="fa_check_circle">&#xf269;</string>
+    <string name="fa_close_circle">&#xf135;</string>
+    <string name="fa_plus">&#xf278;</string>
+    <string name="fa_alert_triangle">&#xf1f4;</string>
+    <string name="fa_badge_checked">&#xf110;</string>
+    <string name="fa_mail_send">&#xf194;</string>
+    <string name="fa_camera">&#xf28c;</string>
+    <string name="fa_wifi_off">&#xf2e6;</string>
+    <string name="fa_edit">&#xf158;</string>
+    <string name="fa_delete">&#xf154;</string>
+    <string name="fa_time">&#xf337;</string>
+    <string name="fa_tab_play">&#xf3e6;</string>
+    <string name="fa_block">&#xf119;</string>
+    <string name="fa_cloud_off">&#xf21b;</string>
+    <string name="fa_timer">&#xf339;</string>
+    <string name="fa_calendar">&#xf332;</string>
+</resources>

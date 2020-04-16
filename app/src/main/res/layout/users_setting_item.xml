@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:contentView="@+id/main_content"
+        app:leftMenuView="@+id/left">
+
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:background="@android:color/holo_blue_dark"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/left_menu_remove"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="#D0011B">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_remove_bin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="27dp"
+                        android:textColor="@color/sysWhite"
+                        android:text="@string/fa_delete" />
+
+                    <TextView
+                        style="@style/Body2_Option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="REMOVE"
+                        android:textColor="@color/sysWhite" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_edit"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="@color/colorDefaultYellow">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_edit_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fa_edit"
+                        android:textSize="27dp"/>
+
+                    <TextView
+                        style="@style/Body2_Option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="EDIT"
+                        android:textColor="@color/alertTitle" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_reset"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="@color/alertTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_lock_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/sysWhite"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="25dp"
+                        android:text="@string/fa_lock" />
+
+                    <TextView
+                        style="@style/Body2_Option"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="RESET\nPASSCODE"
+                        android:textColor="@color/sysWhite" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/user_short_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/user_circle"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="KS"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/sysWhite"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/user_short_name"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/user_name_content"
+                    style="@style/SubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Ger Cummins"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@color/alertTitle"
+                    android:textSize="18dp" />
+
+
+                <TextView
+                    android:id="@+id/user_role"
+                    style="@style/Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="Rank 3"
+                    android:textColor="@color/alertContent" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_select_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/arrow_grey"
+                android:textSize="30dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/user_option_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/baseline_phone_android_black_48dp" />
+
+        </RelativeLayout>
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+</LinearLayout>

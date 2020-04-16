@@ -1,0 +1,167 @@
+<resources>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="hProgressBar">
+        <item name="colorAccent">@color/colorDefaultGreen</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarTheme">@style/AppTheme.Title</item>
+
+    </style>
+
+    <style name="AppTheme.Title" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColor">@color/alertTitle</item>
+    </style>
+
+    <style name="MaterialAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ActionBarMaterialAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
+    </style>
+
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/sysWhite</item>
+    </style>
+
+    <style name="AccentButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/colorDefaultGreen</item>
+        <item name="colorAccent">@color/colorDefaultGreen</item>
+        <item name="android:textColor">@color/sysWhite</item>
+    </style>
+
+    <style name="BlackButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/sysBlack</item>
+        <item name="colorAccent">@color/sysBlack</item>
+        <item name="colorControlHighlight">@color/colorDefaultYellow</item>
+        <item name="android:textColor">@color/sysWhite</item>
+    </style>
+
+    <style name="CustomTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/alertTitle</item>
+        <item name="colorControlActivated">@color/alertTitle</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorSecondary">@color/sysBlack</item>
+    </style>
+
+    <style name="ThemeToolbarDarkOverflow" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">@color/sysWhite</item>
+        <item name="android:textColorSecondary">@color/sysWhite</item>
+
+    </style>
+
+    <style name="ThemeOverlay.MySwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorDefaultGreen</item>
+    </style>
+
+    <style name="MySwitchCompat" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorDefaultGreen</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="lightRippleButton">
+        <item name="colorControlHighlight">@color/sysLightGrey</item>
+    </style>
+
+    <!--custom view style-->
+    <style name="HeaderTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/sysBlack</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="subTitleViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="SubHeaderTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/sysBlack</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="ListTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+    </style>
+
+    <style name="whiteTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/sysWhite</item>
+    </style>
+
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">97%</item>
+    </style>
+
+
+    <style name="pin_edittext_style">
+        <item name="android:gravity">center</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:minEms">2</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="healthSafetyCheckYesButtonSelection">
+        <item name="android:background">@drawable/selector_button_c1d72f</item>
+        <item name="android:textColor">@color/black_alpha_72</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">@dimen/dp_4</item>
+        <item name="android:paddingEnd">@dimen/dp_4</item>
+    </style>
+
+    <style name="healthSafetyCheckNoButtonSelection">
+        <item name="android:background">@drawable/selector_button_ff0000</item>
+        <item name="android:textColor">@color/black_alpha_72</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">@dimen/dp_4</item>
+        <item name="android:paddingEnd">@dimen/dp_4</item>
+    </style>
+
+</resources>

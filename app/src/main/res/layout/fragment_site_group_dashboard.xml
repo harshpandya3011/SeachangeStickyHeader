@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSimple"
+    android:orientation="vertical"
+    tools:context=".fragment.SiteGroupDashboardFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_site_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabContentStart="52dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/greenSimple"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/greenSimple">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today_cap" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week_cap" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_cap" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_cap" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/tv_site_group_no_data_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/sysBlack"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_site_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="12dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_site_tour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/site_tours"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/sysBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_number_of_sites"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_title_site_tour"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_site_tour"
+                        tools:text="@tools:sample/lorem" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_scheduled_completed_tours_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:paddingStart="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/sysBlack"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_site_tour_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_site_tour"
+                        tools:text="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/completed_tours"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_site_tour_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_completed_tours_value" />
+
+                    <View
+                        android:id="@+id/divider_site_tour_1"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/greySimpleDivider"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_scheduled_completed_tours_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_scheduled_completed_tours_value" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_tour_compliance"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progressDrawable="@drawable/shape_circle_progress_big_black"
+                        android:secondaryProgress="100"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_tour_compliance_value"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_site_tour_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_site_tour_1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_tour_compliance_value"
+                        tools:progress="65" />
+
+                    <TextView
+                        android:id="@+id/tv_tour_compliance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="14dp"
+                        android:textColor="@color/sysBlack"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_scheduled_completed_tours_value"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_site_tour_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_site_tour_1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_scheduled_completed_tours_value"
+                        tools:text="100%" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tour_compliance"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_site_tour_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_site_tour_1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_completed_tours_value" />
+
+                    <View
+                        android:id="@+id/divider_site_tour_2"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/greySimpleDivider"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_tour_hazards_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.66"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_tour_hazards_value" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_tour_hazards_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:paddingStart="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/sysBlack"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/divider_site_tour_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_site_tour"
+                        tools:text="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tour_hazards"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/divider_site_tour_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_tour_hazards_value" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_zone_checks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/card_view_site_tour">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_zone_checks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_checks"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/sysBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_number_of_zones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_title_zone_checks"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_zone_checks"
+                        tools:text="@tools:sample/lorem" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_scheduled_completed_checks_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:paddingStart="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/sysBlack"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_zone_checks_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_zone_checks"
+                        tools:text="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/completed_checks"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_zone_checks_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_completed_checks_value" />
+
+                    <View
+                        android:id="@+id/divider_zone_checks_1"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/greySimpleDivider"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_scheduled_completed_checks_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_scheduled_completed_checks_value" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_check_compliance"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progressDrawable="@drawable/shape_circle_progress_big_black"
+                        android:secondaryProgress="100"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_check_compliance_value"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_zone_checks_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_zone_checks_1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_check_compliance_value"
+                        tools:progress="65" />
+
+                    <TextView
+                        android:id="@+id/tv_check_compliance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="14dp"
+                        android:textColor="@color/sysBlack"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_scheduled_completed_checks_value"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_zone_checks_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_zone_checks_1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_scheduled_completed_checks_value"
+                        tools:text="100%" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/check_compliance"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toStartOf="@+id/divider_zone_checks_2"
+                        app:layout_constraintStart_toEndOf="@+id/divider_zone_checks_1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_completed_checks_value" />
+
+                    <View
+                        android:id="@+id/divider_zone_checks_2"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/greySimpleDivider"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_check_hazards_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.66"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_check_hazards_value" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_check_hazards_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:paddingStart="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/sysBlack"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/divider_zone_checks_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_zone_checks"
+                        tools:text="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/check_hazards"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/divider_zone_checks_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_check_hazards_value" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_leader_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPaddingBottom="16dp"
+                app:contentPaddingTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/card_view_zone_checks">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title_leader_board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/zones_leader_board"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/sysBlack" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_leader_board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_leaderboard" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_site_group_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="card_view_site_tour,card_view_zone_checks,card_view_leader_board" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

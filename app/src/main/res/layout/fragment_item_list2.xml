@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="seachange.com.caygo.fragment.JSAMainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
+    tools:context="com.seachange.healthandsafty.fragment.JSAMainFragment"
+    tools:listitem="@layout/fragment_item2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_grey">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/round_corner_view"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/jsa_title"
+                    style="@style/HeadLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/alertTitle"
+                    android:text="Safe Operation of Goods Lift"/>
+
+                <TextView
+                    android:id="@+id/assess_date"
+                    style="@style/Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="1dp"
+                    android:textColor="@color/alertContent"
+                    android:text="2 Nov 2017"/>
+
+
+                <ImageView
+                    android:id="@+id/jsa_header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/lineGrey"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                    android:id="@+id/jsa_creator"
+                    style="@style/Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/alertContent"
+                    android:text="Created by SAT Team"/>
+
+                <TextView
+                    style="@style/Body1"
+                    android:id="@+id/jsa_name_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/alertTitle"
+                    android:text="Mace 578 Sourth Circular Road"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="22dp"
+                android:textColor="@color/sysBlack"
+                android:text="@string/hazard_boxes"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jsaContentRecyclyerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_grey"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

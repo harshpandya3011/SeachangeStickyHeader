@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.seachange.healthandsafty.activity.AddUserActivity"
+    tools:showIn="@layout/activity_add_user">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/fname_text_box"
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    app:errorColor="@color/errorColor"
+                    app:helperText=" "
+                    app:labelText="First Name"
+                    app:panelBackgroundColor="#F1F1F1"
+                    app:primaryColor="@color/alertTitle"
+                    app:secondaryColor="@color/alertTitle">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/first_name_edit"
+                        style="@style/SubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="John"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/alertContent"
+                        android:textColorHint="@color/iconGrey"
+                        android:textSize="16sp" />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                        android:id="@+id/password_text_box"
+                        style="@style/Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorColor="@color/errorColor"
+                        app:helperText=" "
+                        app:labelText="Last Name"
+                        app:panelBackgroundColor="#F1F1F1"
+                        app:primaryColor="@color/alertTitle"
+                        app:secondaryColor="@color/alertTitle">
+
+
+                        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                            android:id="@+id/lastName_edit"
+                            style="@style/SubHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginRight="40dp"
+                            android:hint="Smith"
+                            android:imeOptions="actionUnspecified"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/alertContent"
+                            android:textColorHint="@color/iconGrey" />
+
+                    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="#F1F1F1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/user_manager_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tour_zone"
+                        style="@style/SubHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="CAYGO Manager"
+                        android:textColor="@color/alertTitle" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/user_champion_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:layout_weight="1"
+                    android:background="@color/colorDefaultYellow">
+
+                    <TextView
+                        style="@style/SubHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="CAYGO Champion"
+                        android:textColor="@color/alertTitle" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:background="#F1F1F1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/user_type_portal"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/user_option_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@mipmap/baseline_phonelink_black_48dp" />
+
+                        <TextView
+                            style="@style/SubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Portal User"
+                            android:textColor="@color/alertTitle" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/user_type_mobile"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorDefaultYellow">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/user_option_mobile"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@mipmap/baseline_phone_android_black_48dp" />
+
+                        <TextView
+                            style="@style/SubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Mobile User"
+                            android:textColor="@color/alertTitle" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/manage_user_email_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/manage_email_text_box"
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    app:errorColor="@color/errorColor"
+                    app:helperText=" "
+                    app:labelText="Email"
+                    app:panelBackgroundColor="#F1F1F1"
+                    app:primaryColor="@color/alertTitle"
+                    app:secondaryColor="@color/alertTitle">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/manage_user_email"
+                        style="@style/SubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/email_place_holder"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/alertContent"
+                        android:textColorHint="@color/iconGrey"
+                        android:textSize="16sp" />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+            </LinearLayout>
+
+            <TextView
+                style="@style/Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Temporary Mobile Passcode"
+                android:textColor="@color/alertContent" />
+
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="2149"
+                android:textColor="@color/alertTitle" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorDefaultYellow">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/type_add_button"
+            android:layout_marginBottom="4dp"
+            android:background="@color/lineGrey" />
+
+        <Button
+            android:id="@+id/user_add_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="160dp"
+            android:layout_height="57dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="add user"
+            android:textSize="18dp"
+            android:theme="@style/AccentButton" />
+    </RelativeLayout>
+
+</RelativeLayout>

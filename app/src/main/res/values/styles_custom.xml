@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="HeadLine" parent="android:Widget.TextView">
+        <item name="android:textSize">24dp</item>
+    </style>
+    <style name="Title" parent="android:Widget.TextView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="SubTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SubHeader" parent="android:Widget.TextView">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="SubHeader2" parent="android:Widget.TextView">
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Body1" parent="android:Widget.TextView">
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="Body2" parent="android:Widget.TextView">
+        <item name="android:textSize">14dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Caption" parent="android:Widget.TextView">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="Body2_Option" parent="android:Widget.TextView">
+        <item name="android:textSize">13dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="NavyBtn" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

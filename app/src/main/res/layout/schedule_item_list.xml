@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.seachange.healthandsafty.fragment.ScheduleFragment"
+    android:background="@color/app_grey">
+
+    <RelativeLayout
+        android:id="@+id/schedule_date_rel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/sysWhite"
+        android:elevation="5dp">
+
+        <Button
+            android:id="@+id/schedule_header_date"
+            style="@style/Body2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:textColor="@color/alertTitle"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_border"
+            android:layout_marginLeft="10dp"
+            android:text="Today, 01 Aug 2018"/>
+
+    </RelativeLayout>
+
+    <com.seachange.healthandsafty.helper.View.AnimatedExpandableListView
+        android:id="@+id/expandableListViewlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        android:layout_below="@+id/schedule_date_rel"
+        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight" />
+
+    <RelativeLayout
+        android:id="@+id/schedule_progress_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sysWhite"
+        android:layout_below="@+id/schedule_date_rel"
+        android:layout_gravity="center">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/schedule_avi"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorDefaultYellow"
+            app:indicatorName="BallPulseIndicator" />
+
+        <TextView
+            android:id="@+id/schedule_no_content"
+            style="@style/HeaderTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/alertTitle"
+            android:layout_margin="16dp"
+            android:layout_marginTop="48dp"
+            android:visibility="gone"
+            android:text="There is no schedule yet for today."/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/zone_hazards"
+        style="@style/SubHeader"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_grey"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/alertTitle"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="80dp"
+        android:layout_toRightOf="@+id/zone_hazards"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/zone_title_content"
+            style="@style/SubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/alertTitle"
+            android:text="Deli"/>
+
+        <TextView
+            android:id="@+id/zone_title_sub_content"
+            style="@style/Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paused"
+            android:textColor="@color/alertContent" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/tour_zone_sync_image_manager"
+        style="@style/Body2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/zone_check_icon"
+        android:src="@mipmap/baseline_cloud_done_black_48dp"/>
+    <TextView
+        android:id="@+id/zone_title_content_continue"
+        style="@style/Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/zone_check_icon"
+        android:text="Continue"
+        android:textColor="@color/colorDefaultYellow" />
+
+    <TextView
+        android:id="@+id/zone_check_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>

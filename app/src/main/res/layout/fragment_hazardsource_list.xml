@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/source_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@color/sysWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/source_title"
+                    style="@style/HeadLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="@string/select_hazard"
+                    android:textColor="@color/alertTitle" />
+
+                <TextView
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingTop="10dp"
+                    android:text="@string/frequently_used"
+                    android:textColor="@color/alertTitle"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hazard_source_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="7dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/source_selected_hazards"
+                            style="@style/Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="1 selected "
+                            android:textColor="@color/alertContent"
+                            android:textSize="17sp" />
+
+
+                        <Button
+                            android:id="@+id/source_add_hazard"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="230dp"
+                            android:layout_height="57dp"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:text="@string/add_hazard"
+                            android:textColor="@color/sysWhite"
+                            android:textSize="18sp"
+                            android:theme="@style/AccentButton" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/source_send_progress"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorDefaultGreen"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyle"
+                            android:theme="@style/CircularProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingTop="20dp"
+                    android:text="@string/hazard_sources"
+                    android:textColor="@color/alertTitle"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hazard_source_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progress_rel_source"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/sysWhite">
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi_source"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorDefaultYellow"
+            app:indicatorName="BallPulseIndicator" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/source_down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fa_chevron_down"
+        android:textColor="@color/colorDefaultGreen"
+        android:textSize="60sp" />
+
+    <View
+        android:id="@+id/source_block_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="together">
+
+    <!--<slide android:slideEdge="bottom">-->
+    <!--</slide>-->
+    <fade>
+    </fade>
+
+</transitionSet>
+
+<!--<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash;<changeBounds/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<changeTransform/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<changeClipBounds/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<changeImageTransform/>&ndash;&gt;-->
+<!--</transitionSet>-->

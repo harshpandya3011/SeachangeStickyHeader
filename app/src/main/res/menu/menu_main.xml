@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/exit"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_ra_flow1"
+        android:title="@string/manage_users"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_nfc"
+        android:title="@string/nfc_tag_setup"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_nfc_read"
+        android:title="@string/read_nfc_tag"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_schedule"
+        android:title="@string/schedule_zones"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_check_list"
+        android:title="@string/check_list"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/actionCheckListTemplates"
+        android:title="@string/check_list_templates"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/app_version"
+        android:title="@string/app_version"
+        android:visible="true"
+        app:showAsAction="never" />
+
+
+    <!--<item-->
+    <!--android:id="@+id/action_ra_flow2"-->
+    <!--android:title="Risk Assessment flow 2"-->
+    <!--android:visible="true"-->
+    <!--app:showAsAction="never" />-->
+
+</menu>

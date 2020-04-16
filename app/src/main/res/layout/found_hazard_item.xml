@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/check_hazard_name"
+        style="@style/SubHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combi/Cage"
+        android:textColor="@color/alertTitle" />
+
+    <TextView
+        style="@style/Body1"
+        android:id="@+id/check_hazard_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Obstruction"
+        android:textColor="@color/iconGrey" />
+
+    <TextView
+        style="@style/Body1"
+        android:id="@+id/check_hazard_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="16:02"
+        android:textColor="@color/iconGrey"
+        android:layout_marginBottom="12dp"/>
+
+</LinearLayout>

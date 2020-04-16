@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:id="@+id/schedule_home_tour_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_view">
+
+            <RelativeLayout
+                android:id="@+id/manager_expand_group_rel"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/left_right_border">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/lineGrey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/schedule_manager_hazards"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circle_grey"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/schedule_manager_tour_title"
+                style="@style/HeaderTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="60dp"
+                android:layout_toRightOf="@+id/schedule_manager_hazards"
+                android:text="Site Tour"
+                android:textAppearance="?android:attr/textAppearanceListItem" />
+
+            <TextView
+                android:id="@+id/schedule_tour_home_tour_date"
+                style="@style/subTitleViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/schedule_manager_tour_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toRightOf="@+id/schedule_manager_hazards"
+                android:text="Today, 16 Oct"
+                android:textColor="@color/text_grey" />
+
+            <TextView
+                android:id="@+id/schedule_manager_check_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:textSize="25dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/schedule_previous_group_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_corner_view">
+
+        <RelativeLayout
+            android:id="@+id/expand_group_rel"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/left_right_border">
+
+            <View
+                android:id="@+id/expand_group_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/lineGrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/schedule_current_top_rel"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/schedule_zone_hazards"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_grey"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/schedule_zone_title_content_view"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/schedule_zone_hazards">
+
+                <TextView
+                    android:id="@+id/schedule_zone_title_content"
+                    style="@style/HeaderTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:00"
+                    android:textAppearance="?android:attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/schedule_zone_title_content_sub"
+                    style="@style/ListTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/schedule_zone_title_content"
+                    android:text="- 7:00"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/schedule_zone_title_content_current_view"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/schedule_zone_title_content_view">
+
+                <TextView
+                    android:id="@+id/schedule_zone_title_content_current"
+                    style="@style/HeaderTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:00"
+                    android:textAppearance="?android:attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/schedule_zone_title_content_current_sub"
+                    style="@style/ListTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- 7:00"
+                    android:layout_toEndOf="@+id/schedule_zone_title_content_current"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/text_grey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/schedule_current_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/schedule_zone_title_content_current_view"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/schedule_zone_hazards"
+                android:layout_marginTop="-10dp"
+                android:text="Current Zone Checks" />
+
+            <ProgressBar
+                android:id="@+id/schedule_current_compliance_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/schedule_zone_check_icon"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="90"
+                android:progressDrawable="@drawable/circular"
+                android:secondaryProgress="100" />
+
+            <TextView
+                android:id="@+id/schedule_current_check_compliance"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="@color/colorDefaultYellow"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/schedule_zone_check_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/schedule_current_progress_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/schedule_current_top_rel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/schedule_current__tour_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_remaining"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/schedule_current__chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/text_grey"
+                    android:background="@color/sysWhite"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/schedule_current_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_bar"
+                android:theme="@style/hProgressBar" />
+
+            <TextView
+                android:id="@+id/schedule_current_tour_hazard_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0/5 Zones Checked"
+                android:textColor="@color/sysBlack"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

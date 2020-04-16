@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_manage_users"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.seachange.healthandsafty.fragment.ManageUsersFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarHealth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_health_safety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/weekly_health_amp_safety_checklist" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/appBarHealth"
+        app:layout_anchorGravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarHealth">
+
+
+        <RelativeLayout
+            android:id="@+id/relOverAllProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_alpha_16"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/relProgress"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weekly_health_amp_safety_checklist"
+                    android:textColor="@color/alertTitle"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtCategorySubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/alertContent"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="Rank 1 | 15 Checks" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="46dp">
+
+                <ProgressBar
+                    android:id="@+id/progressOverAll"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/circular_progress_health"
+                    android:secondaryProgress="100" />
+
+                <TextView
+                    android:id="@+id/txtProgressOverAll"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_centerInParent="true"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:textColor="@color/black_alpha_72"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="10%" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_health_safety1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relOverAllProgress"
+            android:clipToPadding="false"
+            android:paddingBottom="72dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_health_category" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_health_safety"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relOverAllProgress"
+            android:clipToPadding="false"
+            android:paddingBottom="72dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_health_category" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

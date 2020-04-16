@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.seachange.healthandsafty">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".application.AppController"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher_w"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".activity.ZoneSchedulingActivity"
+            android:theme="@style/ActionBarMaterialAppTheme" />
+        <activity
+            android:name=".activity.ManageUsersActivity"
+            android:theme="@style/MaterialAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".nfconboard.NFCOnBoardingFinishedSetUpActivity" />
+        <activity
+            android:name=".nfconboard.NFCOnBoardTagActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nfconboard.NFCOnBoardingWelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nfc.ui.NFCTagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nfc.ui.NFCZoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nfc.ui.NFCSetUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nfc.ui.NFCMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="ext"
+                    android:pathPrefix="/seachange.com:caygo"
+                    android:scheme="vnd.android.nfc" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CaygoZoneCheckActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HazardSourceActivity" />
+        <activity
+            android:name=".activity.HazardTypeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.ManagerTourActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CaygoHomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_caygo_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EndCheckActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EndTourActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_login"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="caygo.com"
+                    android:scheme="seachange" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.seachange.app.com"
+                    android:pathPrefix="/reset"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="192.168.1.131:3054"
+                    android:path="/#/password-reset-mobile"
+                    android:pathPrefix="/reset"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.JSAActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.JSAQuestionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PassCodeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.QRCodeCaptureActivity"
+            android:label="@string/title_activity_qrcode_capture"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.SelectUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".activity.RAMainActivity"
+            android:label="@string/title_activity_ramain"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.RAHazardsBPActivity"
+            android:label="@string/title_activity_rahazards"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.camera.CameraActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.RASelectOptionActivity" />
+        <activity android:name=".activity.SelectRiskActivity" />
+        <activity android:name=".activity.RAHazardsActivity" />
+        <activity
+            android:name=".activity.RASelectImageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ZoneCheckActivity" />
+        <activity
+            android:name=".activity.healthandsafety.HealthAndSafetyActivity"
+            android:theme="@style/MaterialAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.checklist_templates.CheckListTemplateActivity"
+            android:theme="@style/MaterialAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!--        <activity-->
+        <!--            android:name=".nfc.ui.NFCReaderActivity"-->
+        <!--            android:screenOrientation="portrait">-->
+
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.nfc.action.NDEF_DISCOVERED" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+
+
+        <!-- <data -->
+        <!-- android:host="ext" -->
+        <!-- android:pathPrefix="/peterjohnwelcome.com:nfcapp" -->
+        <!-- android:scheme="vnd.android.nfc" /> -->
+        <!-- </intent-filter> -->
+        <!--        </activity>-->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1ad2a987aa06cfed6c2bba62d2e9ff919ba0210f" />
+    </application>
+
+
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.nfc"-->
+    <!--        android:required="true" />-->
+
+
+</manifest>

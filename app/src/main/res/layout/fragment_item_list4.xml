@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="seachange.com.caygo.fragment.JSAQuestionFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
+    tools:context="com.seachange.healthandsafty.fragment.RAHazardsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ra_hazards_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/sysWhite"
+        android:orientation="horizontal" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorDefaultYellow">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/type_add_button"
+            android:layout_marginBottom="4dp"
+            android:background="@color/lineGrey"/>
+
+        <TextView
+            android:id="@+id/ra_selected_hazards"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="1 selected "
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/sourceGrey"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/ra_hazard_continue"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="160dp"
+            android:layout_height="57dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="@string/continue_on"
+            android:theme="@style/AccentButton"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

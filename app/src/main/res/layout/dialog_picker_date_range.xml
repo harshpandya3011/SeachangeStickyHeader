@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/material_calendar_view_date_range"
+    android:layout_width="match_parent"
+    app:mcv_showOtherDates="out_of_range"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/date_range_picker_dialog_padding" />

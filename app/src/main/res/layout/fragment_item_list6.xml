@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.seachange.healthandsafty.fragment.GallaryFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    tools:context="com.seachange.healthandsafty.fragment.GalleryFragment"
+    tools:listitem="@layout/fragment_item6"
+    android:background="@color/sysBlack">
+
+    <RelativeLayout
+        android:id="@+id/gallery_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/sysBlack">
+
+        <Button
+            android:id="@+id/gallery_nav_back"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginLeft="12dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/sysWhite"
+            android:text="@string/fa_left_arrow"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/sysWhite"
+            android:textSize="20dp"
+            android:text="All Photos"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gallery_nav"
+        android:background="@color/sysBlack"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="10dp">
+
+
+        <Button
+            android:id="@+id/camera_continue_gallery"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:elevation="5dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/sysBlue"
+            android:background="@drawable/circle_white"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/camera_Image_title_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sysWhite"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/circle_blue"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="13dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gallery_imag_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlayBlack" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seachange.healthandsafty.nfconboard.NFCOnBoardTagActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="@string/let_s_setup_the_nfc_tags_for_your_site_s_zones"
+                android:textColor="@color/alertTitle"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/image_content"
+                android:src="@mipmap/i_nfc_tag" />
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/you_will_need"
+                android:textColor="@color/alertTitle"/>
+
+            <TextView
+                android:id="@+id/nfc_zone_number"
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:text="x"
+                android:textColor="@color/alertTitle" />
+
+            <TextView
+                style="@style/SubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/rewritable_nfc_tags"
+                android:textColor="@color/alertTitle" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/welcome_start_nfc_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorDefaultGreen"
+            android:text="@string/i_have_my_nfc_tags"
+            android:textColor="@color/sysWhite"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

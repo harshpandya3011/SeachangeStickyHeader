@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.pavlospt.CircleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ra_hazard_level_back"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    app:cv_strokeColorValue="@color/sysTransparent"
+                    app:cv_strokeWidthSize="0"
+                    app:cv_titleColor="@color/sysWhite"
+                    app:cv_titleSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ra_hazard_title"
+                        style="@style/SubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hazard"
+                        android:textColor="@color/alertTitle" />
+
+                    <TextView
+                        android:id="@+id/ra_hazard_sub_title_label"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Draft"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        android:textColor="@color/alertContent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ra_hazard_main_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/circle_grey"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/ra_alert"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:text="@string/fa_alert_triangle"
+                    android:textColor="@color/formWhite"
+                    android:textSize="40dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ra_main_hazard_risk_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/baseline_tune_black_48dp" />
+
+                    <com.github.pavlospt.CircleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ra_hazard_control"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        app:cv_fillColor="#ff0000"
+                        app:cv_strokeColorValue="@color/sysTransparent"
+                        app:cv_strokeWidthSize="0"
+                        app:cv_titleColor="@color/sysWhite"
+                        app:cv_titleSize="10dp"
+                        app:cv_titleText="2" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

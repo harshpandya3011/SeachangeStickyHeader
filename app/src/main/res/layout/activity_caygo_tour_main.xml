@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tour_content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/HeadLine"
+            android:id="@+id/tour_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/alertTitle" />
+
+
+        <Button
+            android:id="@+id/view_hazard_close"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-10dp"
+            android:text="X"
+            android:textColor="#C0C0C0"
+            android:textSize="32dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        style="@style/SubHeader"
+        android:text="@string/caygo_tour"
+        android:textColor="@color/alertTitle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tour_time"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tue, 12 Sept, 16:06"
+            android:textColor="@color/alertContent" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:format="@string/chronometer_initial_format"
+            android:textColor="@color/sysLightGrey"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="35dp">
+
+        <TextView
+            android:id="@+id/tour_hazard_count"
+            style="@style/Title"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_textview"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/sourceGrey"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/view_hazard"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tour_hazard_count"
+            android:text="@string/hazard"
+            android:textColor="@color/alertTitle"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_hazard"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/colorDefaultGreen"
+        android:text="@string/check_add_hazard"
+        android:textColor="@color/sysWhite"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/end_tour"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="@color/colorDefaultGrey"
+        android:text="@string/end_tour"
+        android:textColor="@color/sysBlack"
+        android:textSize="14dp" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-10dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/schedule_zone_middle_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/sysWhite">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="76dp"
+            android:background="#aaa" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="76dp"
+            android:layout_alignParentRight="true"
+            android:background="#aaa" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/schedule_zone_bottom_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_corner_view" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/schedule_zone_child_hazards"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_grey"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="80dp"
+        android:layout_toRightOf="@+id/schedule_zone_child_hazards"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_zone_child_title_content"
+            style="@style/ListTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deli"/>
+
+
+        <TextView
+            android:id="@+id/schedule_zone_title_sub_content"
+            style="@style/Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paused"
+            android:textColor="@color/alertContent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/home_sync_image"
+        style="@style/Body2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/schedule_zone_child_check_icon"
+        android:src="@mipmap/baseline_cloud_done_black_48dp"/>
+
+    <TextView
+        android:id="@+id/schedule_zone_title_content_continue"
+        style="@style/Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/schedule_zone_child_check_icon"
+        android:text="Continue"
+        android:textColor="@color/colorDefaultYellow" />
+
+    <TextView
+        android:id="@+id/schedule_zone_child_check_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="27dp"
+        android:gravity="center"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>
